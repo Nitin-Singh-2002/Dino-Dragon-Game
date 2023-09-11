@@ -3,7 +3,7 @@
 score = 0;
 cross = true;
 
-audio = new Audio('music.mp3');
+audio = new Audio('music.mp33');
 audiogo = new Audio('gameover.mp3');
 
 setTimeout(() => {
@@ -35,10 +35,11 @@ document.onkeydown = function (e) {
     }
 }
 
+
 setInterval(() => {
     dino = document.querySelector('.dino');
     gameOver = document.querySelector('.gameOver');
-    obstacle = document.querySelector('.obstacle');
+    obstacle = document.querySelector('#obstacle');
 
 dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
 dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
@@ -66,13 +67,13 @@ else if(offsetX < 145 && cross) {
     setTimeout(() => {
         cross = true;
     }, 1000);
+
     setTimeout(() => {
         aniDur = parseFloat(window.getComputedStyle(obstacle, null).getPropertyValue('animation-duration'));
-        newDur = aniDur - 1.0;
+        newDur = aniDur - 0.5;
         obstacle.style.animationDuration + newDur + 's';
-        console.log('New animation duration: ', newDur)
+        console.log('New animation duration: ', + newDur);
     }, 500);
-
  }
 
 }, 10);
@@ -80,6 +81,9 @@ else if(offsetX < 145 && cross) {
 function updateScore(score) {
     scoreCont.innerHTML = "Your Score: " + score;
 }
+
+
+
 
 
 

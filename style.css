@@ -27,7 +27,7 @@ body{
     position: absolute;
 }
 
-.obstacle{
+#obstacle{
     background-image: url(dragon.png);
     background-size: cover;
     width: 166px;
@@ -38,11 +38,11 @@ body{
 }
 
 .animateDino{
-    animation: dino 0.6s linear;
+    animation: dino 0.5s linear;
 }
 
 .obstacleAni{
-    animation: obstacleAni 5s linear infinite;
+    animation: obstacleAni 4s linear infinite;
 }
 
 .gameOver{
@@ -53,7 +53,7 @@ body{
     font-family: 'Ubuntu',sans-serif;
 }
 
-.scoreCont{
+#scoreCont{
     font-size: 25px;
     color: #54212f;
     font-weight: bold;
